@@ -3,11 +3,14 @@ from dotenv import load_dotenv
 import os
 import datetime
 import time
+import schedule
 
-load_dotenv() # loading our auth tokens from env file 
+
+load_dotenv() # loading our auth tokens from env file
 
 Sid = os.getenv('SID')  # getting SID
 auth_token = os.getenv('Auth_Token')  # getting authToken
+
 
 def sendMessage(message):
     client = Client(Sid, auth_token)
@@ -18,12 +21,19 @@ def sendMessage(message):
     )
     print(f"Message sent: {message.sid}")
 
-target_time = datetime.datetime(2023, 2, 16, 20, 30, 0) # yyyy, m, dd, hh, mm, ss
 
-while datetime.datetime.now() < target_time:
+def job():
+    today = datetime.datetime.today()
+    if today.weekday() == 3: # 0 for Monday
+        message = "Hello World!"
+        sendMessage(message)
+
+
+# Schedule the job to run every Thursday at 9:30 PM
+schedule.every().thursday.at("21:30:30").do(job)
+
+
+# Keep the program running
+while True:
+    schedule.run_pending()
     time.sleep(1)
-
-if datetime.datetime.now() >= target_time:
-    message = "This message should deliver at 8:30pm on February 16, 2023"
-    sendMessage(message)
-
