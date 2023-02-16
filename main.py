@@ -28,9 +28,19 @@ def job():
         message = "Hello World!"
         sendMessage(message)
 
-
 # Schedule the job to run every Thursday at 9:30 PM
-schedule.every().thursday.at("21:30:30").do(job)
+schedule.every().thursday.at("23:00:00").do(job)
+
+
+def job2():
+    today = datetime.datetime.today()
+    if today.weekday() == 2: 
+        message = "Namaste World! 02"
+        sendMessage(message)
+
+schedule.every().thursday.at("23:10:00").do(job2)
+
+# def job3, job4 ........ jobn
 
 
 # Keep the program running
