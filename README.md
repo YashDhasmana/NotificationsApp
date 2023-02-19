@@ -22,7 +22,7 @@ OUTPUT -
 
 ### Main Test 
 
-Now as the program was working i set it up on a cloud with the request timings being very apart throught the day. It took a lot of time to figure the cloud part , 
+Now as the program was working i set it up on a cloud with the request timings being very apart throught the day. 
 
 OUTPUT - 
 
