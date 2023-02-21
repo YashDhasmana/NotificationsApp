@@ -2,7 +2,7 @@
 
 using twilio's SMS API to send messages directly to phone as SMS reminder upon a certain calendar event. 
 
-To know more about what i was thinking, why do it in the first place, problems encountered etc. etc. visit [here.](https://github.com/YashDhasmana/NotificationsApp) 
+To know more about what i was thinking, why do it in the first place, problems encountered etc. etc. visit [here.](https://github.com/YashDhasmana/NotificationsApp/blob/main/.repoContent/journey.md) 
 
 # Testing 
 
