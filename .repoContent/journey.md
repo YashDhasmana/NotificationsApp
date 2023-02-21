@@ -49,6 +49,24 @@ pip install datetime
 ```
 transfer files using scp and run 
 
+
+**Configuring sytemd unit file**
+
+```
+cd /etc/systemd/system
+
+copy the .service file here 
+
+systemctl daemon-reload
+systemctl start NotificationsApp.service
+systemctl status NotificationsApp.service 
+
+to make it so that it runs on every startup or restarts use :
+sudo systemctl enable NotificationsApp.service
+
+```
+
+
 <br>
 <br>
 
